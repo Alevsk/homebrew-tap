@@ -5,20 +5,20 @@
 class Natop < Formula
   desc "A small, keyboard-driven NATS JetStream dashboard"
   homepage "https://github.com/alevsk/natop"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Alevsk/natop/releases/download/v0.3.0/natop_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "574912ae44d1fa6ae15f66a82dbd1fff7cc4405cc8690617b5b4200337257b1f"
+      url "https://github.com/Alevsk/natop/releases/download/v0.3.1/natop_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "127cdf1447604c2dc37c902038badbf79f9637d1f9e7e41d5ee385dee68c3f4a"
 
       define_method(:install) do
         bin.install "natop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Alevsk/natop/releases/download/v0.3.0/natop_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "7904b88ff1030e60e6ad578fb6ba68752431d338433193215649f94497aec243"
+      url "https://github.com/Alevsk/natop/releases/download/v0.3.1/natop_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "d5a596161a8183ebd1e3c5ec9c6663554602d06b243011b6e62113fa7bb799f4"
 
       define_method(:install) do
         bin.install "natop"
@@ -28,15 +28,15 @@ class Natop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Alevsk/natop/releases/download/v0.3.0/natop_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "697ee2628efd2038d624b5cd7981a0fa67a14c680c15aa7f7c3ee801f08ed092"
+      url "https://github.com/Alevsk/natop/releases/download/v0.3.1/natop_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "52a3fe7e71929cf8e3b373e8e57ae78b4545fab7939cd9883cd3f010d30e3218"
       define_method(:install) do
         bin.install "natop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Alevsk/natop/releases/download/v0.3.0/natop_0.3.0_Linux_arm64.tar.gz"
-      sha256 "a11ddc74cdf0b104d343a8d39150090d6f9ea3bcab2e82b6289ab66a6bfdf958"
+      url "https://github.com/Alevsk/natop/releases/download/v0.3.1/natop_0.3.1_Linux_arm64.tar.gz"
+      sha256 "f92d0d55c1de9995af233ca782650e9b29c240ebee82cb5f95287a1d22a4e239"
       define_method(:install) do
         bin.install "natop"
       end
